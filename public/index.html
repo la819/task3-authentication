@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auth System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Login/Register Forms -->
+  <div id="authSection">
+    <div class="auth-container">
+
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('login')">Login</button>
+        <button class="tab" onclick="showTab('register')">Register</button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="loginForm">
+        <h2>🔐 Login</h2>
+        <input type="email"    id="loginEmail"    placeholder="📧 Email"    />
+        <input type="password" id="loginPassword" placeholder="🔒 Password" />
+        <button onclick="login()">Login</button>
+        <p id="loginMessage"></p>
+      </div>
+
+      <!-- Register Form -->
+      <div id="registerForm" style="display:none">
+        <h2>📝 Register</h2>
+        <input type="text"     id="regUsername" placeholder="👤 Username" />
+        <input type="email"    id="regEmail"    placeholder="📧 Email"    />
+        <input type="password" id="regPassword" placeholder="🔒 Password" />
+        <button onclick="register()">Register</button>
+        <p id="registerMessage"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Dashboard (shown after login) -->
+  <div id="dashboard" style="display:none">
+    <div class="dashboard-container">
+      <h2>🎉 Welcome to Dashboard!</h2>
+      <p id="welcomeMessage"></p>
+      <div class="user-card">
+        <h3>👤 Your Profile</h3>
+        <p id="userInfo"></p>
+      </div>
+      <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
